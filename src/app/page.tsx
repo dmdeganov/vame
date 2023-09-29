@@ -211,7 +211,6 @@ const Page = () => {
       <div className="light-2-wrapper">
         <div className="light-2">
           <Light2Svg preserveAspectRatio="none" />
-          <div className="fix" />
         </div>
       </div>
       <div className="ads-platforms">

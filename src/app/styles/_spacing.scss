@@ -1,0 +1,66 @@
+$spaceAmounts: (0, 1, 2, 3, 4, 5, 6, 7, 8);
+$spaceValue: 8;
+
+@each $space in $spaceAmounts {
+  .m-#{$space} {
+    margin: #{$space * $spaceValue}px !important;
+  }
+
+  .mx-#{$space} {
+    margin-left: #{$space * $spaceValue}px !important;
+    margin-right: #{$space * $spaceValue}px !important;
+  }
+
+  .my-#{$space} {
+    margin-top: #{$space * $spaceValue}px !important;
+    margin-bottom: #{$space * $spaceValue}px !important;
+  }
+
+  .ml-#{$space} {
+    margin-left: #{$space * $spaceValue}px !important;
+  }
+
+  .mr-#{$space} {
+    margin-right: #{$space * $spaceValue}px !important;
+  }
+
+  .mb-#{$space} {
+    margin-bottom: #{$space * $spaceValue}px !important;
+  }
+
+  .mt-#{$space} {
+    margin-top: #{$space * $spaceValue}px !important;
+  }
+}
+
+@each $space in $spaceAmounts {
+  .p-#{$space} {
+    padding: #{$space * $spaceValue}px !important;
+  }
+
+  .px-#{$space} {
+    padding-left: #{$space * $spaceValue}px !important;
+    padding-right: #{$space * $spaceValue}px !important;
+  }
+
+  .py-#{$space} {
+    padding-top: #{$space * $spaceValue}px !important;
+    padding-bottom: #{$space * $spaceValue}px !important;
+  }
+
+  .pl-#{$space} {
+    padding-left: #{$space * $spaceValue}px !important;
+  }
+
+  .pr-#{$space} {
+    padding-right: #{$space * $spaceValue}px !important;
+  }
+
+  .pb-#{$space} {
+    padding-bottom: #{$space * $spaceValue}px !important;
+  }
+
+  .pt-#{$space} {
+    padding-top: #{$space * $spaceValue}px !important;
+  }
+}

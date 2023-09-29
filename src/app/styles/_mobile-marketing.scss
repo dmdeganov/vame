@@ -1,0 +1,59 @@
+@use 'variables' as *;
+.mobile-marketing {
+  @include bounds();
+  @include section-top-gap();
+  h2 {
+    color: $on-inverse-surface;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 48px;
+    grid-row-gap: 96px;
+   & > p:first-child {
+      font-size: 20px;
+      color: $on-inverse-surface;
+      opacity: 0.5;
+      font-weight: 500;
+      line-height: 150%;
+      max-width: 531px;
+    }
+  }
+  &__descriptions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    p {
+      color: $on-inverse-surface;
+      font-weight: 500;
+      line-height: 150%;
+      opacity: 0.7;
+    }
+  }
+  &__approach,
+  &__how {
+    max-width: 531px;
+    h4 {
+      color: $inverse-surface;
+      margin-bottom: 20px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      li {
+        color: $on-surface-70;
+        @include li-marker();
+      }
+    }
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+  &__grid{
+    grid-template-columns: 1fr;
+    row-gap: 64px;
+  }
+    &__descriptions{
+      margin-top: -40px;
+    }
+  }
+}

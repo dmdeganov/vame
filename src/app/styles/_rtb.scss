@@ -1,0 +1,79 @@
+@use 'variables' as *;
+.rtb {
+  @include bounds();
+  @include section-top-gap();
+  &__row {
+    &:not(:last-of-type) {
+      margin-bottom: 96px;
+    }
+    &:last-of-type {
+      padding: 32px 32px 32px 0;
+      //background-color: #fff;
+    }
+    & > div:first-of-type {
+      max-width: 561px;
+    }
+    & > div:last-of-type {
+      max-width: 479px;
+    }
+    display: flex;
+    column-gap: max(64px, 14%);
+  }
+  &__descriptions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    p {
+      line-height: 150%;
+      color: $on-surface;
+      &:first-of-type {
+        font-size: 20px;
+        color: $on-surface-70;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    li {
+      @include li-marker();
+      color: $on-surface-70;
+    }
+  }
+  &__feautures {
+    max-width: 480px;
+    align-self: flex-end;
+  }
+  h4 {
+    margin-bottom: 20px;
+    color: $on-inverse-surface;
+  }
+  &__offer-descriptions {
+    margin-bottom: 32px;
+    p {
+      color: $on-inverse-surface-50;
+      &:not(:last-of-type) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  &__decoration {
+    margin-left: -2%;
+    flex: 1 1 calc(50% - 24px);
+    align-self: stretch;
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+    &__row {
+      flex-direction: column;
+      row-gap: 20px;
+      &:not(:last-of-type){
+        margin-bottom: 64px;
+      }
+    }
+    &__decoration{
+      display: none;
+    }
+  }
+}

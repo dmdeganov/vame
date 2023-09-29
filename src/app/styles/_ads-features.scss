@@ -1,0 +1,53 @@
+@use 'variables' as *;
+.ads-features {
+  @include bounds();
+  @include section-top-gap();
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 395px 368px;
+    column-gap: 23px;
+    row-gap: 20px;
+    & > div {
+      height: 100%;
+      @include card();
+      &:nth-of-type(2) {
+        height: 365px;
+      }
+      &:nth-of-type(5) {
+        height: 398px;
+        margin-top: -30px;
+      }
+    }
+    @media only screen and (max-width: $max-mobile-width) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 368px);
+      & > div {
+        &:nth-of-type(2) {
+          height: 100%;
+        }
+        &:nth-of-type(5) {
+          height: 100%;
+          margin-top: unset;
+        }
+      }
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+    overflow: hidden;
+  }
+  &__icon-wrapper {
+    position: relative;
+    height: 100%;
+    svg {
+      position: absolute;
+      height: 100%;
+      margin: 0 auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

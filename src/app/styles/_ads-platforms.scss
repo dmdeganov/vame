@@ -1,0 +1,50 @@
+@use 'variables' as *;
+.ads-platforms {
+  @include bounds();
+  margin-top: 144px;
+  padding: 0 64px;
+
+  h4 {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+  svg {
+    height: 48px;
+    width: auto;
+    &:nth-child(1),
+    &:nth-child(5) {
+      opacity: 0.5;
+    }
+    &:nth-child(2),
+    &:nth-child(4) {
+      opacity: 0.7;
+    }
+  }
+  .button {
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+    h4 {
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    &__icons {
+      justify-content: flex-start;
+      height: auto;
+      svg {
+        height: 32px;
+      }
+    }
+
+    .button {
+      margin: unset;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@use 'variables' as *;
+.facebook {
+  @include section-top-gap();
+  @include bounds();
+  h2 {
+    color: $on-inverse-surface;
+  }
+  row-gap: 48px;
+  column-gap: 24px;
+  h4 {
+    margin-bottom: 20px;
+    &.inverse {
+      color: $on-inverse-surface;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+    padding: 32px 32px 32px 0;
+    &:nth-of-type(2) {
+      padding: 32px;
+    }
+  }
+  &__cell {
+    flex: 1 1 50%;
+    position: relative;
+    svg {
+      width: 100%;
+    }
+
+    li {
+      max-width: 529px;
+      color: $on-surface-70;
+      @include li-marker();
+      &:not(:last-of-type) {
+        margin-bottom: 12px;
+      }
+    }
+    &--last {
+      display: flex;
+      align-items: flex-end;
+      p {
+        line-height: 150%;
+        max-width: 600px;
+        font-size: 20px;
+      }
+    }
+  }
+  .button {
+    margin-top: 32px;
+  }
+  &__descripitons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    &.mw-529 {
+      max-width: 529px;
+    }
+    //max-width: 600px;
+    p {
+      color: $on-inverse-surface-50;
+    }
+  }
+
+  @media only screen and (max-width: $max-mobile-width) {
+    &__row {
+      flex-direction: column;
+      row-gap: 32px;
+      padding: 0;
+      &:nth-of-type(2) {
+        padding: 0;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 64px;
+      }
+    }
+    &__cell {
+      &--decoration {
+        display: none;
+      }
+    }
+  }
+}

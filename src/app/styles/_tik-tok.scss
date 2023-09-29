@@ -1,0 +1,45 @@
+@use 'variables' as *;
+.tik-tok {
+  @include bounds();
+  @include section-top-gap();
+  &__cards {
+    display: flex;
+    column-gap: 23px;
+    margin-bottom: 64px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    flex: 1 1 calc((100% - 46px) / 3);
+    @include card();
+    p {
+      color: $on-surface-50;
+      line-height: 130%;
+    }
+  }
+  &__icon-wrapper {
+    flex-grow: 1;
+    //height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    svg {
+      display: block;
+      //display: none;
+      //position: absolute;
+      height: 218px;
+      width: auto;
+    }
+  }
+  .button {
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+    &__cards {
+      flex-direction: column;
+      row-gap: 23px;
+    }
+  }
+}

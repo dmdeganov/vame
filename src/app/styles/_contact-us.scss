@@ -1,0 +1,90 @@
+@use 'variables' as *;
+.contact-us {
+  margin-bottom: 123px;
+  @include bounds();
+  @include section-top-gap();
+  display: flex;
+  column-gap: 64px;
+  &__form {
+    flex: 1 1 50%;
+  }
+  &__decoration {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    svg {
+      position: absolute;
+      //transform: translateX(64px);
+      height: 650px;
+      top: 50px;
+      left: 0;
+      //right: -43%;
+    }
+    align-self: stretch;
+    width: 100%;
+  }
+  h1 {
+    color: #fff;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 32px;
+    span {
+      background: linear-gradient(264deg, #7c368d 3.93%, #753384 9.46%, #aa419e 19.18%, #83357a 25.14%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+  }
+  p:first-of-type {
+    color: $on-surface-70;
+    margin-bottom: 32px;
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+    h1 {
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+    &__decoration {
+      position: absolute;
+      height: 0;
+      width: 0;
+      svg{
+        height: 0;
+        width: 0;
+      }
+    }
+  }
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  &__row {
+    display: flex;
+    column-gap: 24px;
+  }
+  .button{
+    margin-top: 16px;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px #111 inset;
+    transition: background-color 5000s ease-in-out 0s;
+    overflow: hidden;
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+    row-gap: 16px;
+
+    &__row {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+}

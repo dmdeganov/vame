@@ -1,0 +1,67 @@
+//variables gotten from css global variables according to theme
+
+$on-surface: #fff;
+$on-surface-50: rgba(255, 255, 255, 0.5);
+$on-surface-70: rgba(255, 255, 255, 0.7);
+$surface: #111111;
+$border-color-10: rgba(17, 17, 17, 0.1);
+$border-color-50: rgba(17, 17, 17, 0.5);
+$purple: #7e378f;
+
+$inverse-surface: #fff;
+$on-inverse-surface: #111111;
+$on-inverse-surface-50: rgba(17, 17, 17, 0.5);
+
+$layout-padding-h: 64px;
+$section-gap: 196px;
+$section-gap-mobile: 128px;
+
+$max-mobile-width: 640px;
+
+@mixin section-description-font {
+  font-size: 20px;
+  color: $on-surface-50;
+  line-height: 150%;
+  font-weight: 400;
+}
+@mixin bounds {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $layout-padding-h;
+  width: min(100%, 1440px);
+  @media only screen and (max-width: $max-mobile-width) {
+    padding: 0 16px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@mixin section-top-gap {
+  margin-top: $section-gap;
+  @media only screen and (max-width: $max-mobile-width) {
+    margin-top: $section-gap-mobile;
+  }
+}
+@mixin card {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(9px);
+  padding: 32px 32px 48px 24px;
+}
+
+@mixin li-marker {
+  position: relative;
+  padding-left: 25px;
+  line-height: 1;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+}

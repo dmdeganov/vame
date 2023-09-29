@@ -1,0 +1,58 @@
+@use 'variables' as *;
+
+.header {
+  position: relative;
+  margin: 0 $layout-padding-h;
+  border-bottom: 1px solid $border-color-10;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 64px;
+  a {
+    color: $on-inverse-surface;
+    white-space: nowrap;
+  }
+  &__company {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &__links-center {
+    display: flex;
+    column-gap: 48px;
+    a {
+      font-size: 14px;
+    }
+  }
+  &__contact-us {
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 1200px) {
+    &__links-center {
+      display: flex;
+      column-gap: 32px;
+      a {
+        font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 1100px) {
+      column-gap: 32px;
+      &__links-center {
+        display: flex;
+        column-gap: 24px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1000px) {
+      column-gap: 24px;
+      &__links-center {
+        display: none;
+      }
+    }
+    @media only screen and (max-width: $max-mobile-width) {
+      margin: 0 16px;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@use 'variables' as *;
+
+.ads-services {
+  @include section-top-gap();
+  @include bounds();
+  &__cards {
+    display: flex;
+    column-gap: 23px;
+    @media only screen and (max-width: 1150px) {
+      flex-direction: column;
+      row-gap: 24px;
+    }
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+    &__cards {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+}
+
+.service-card {
+  flex: 1 1 calc((100% - 46px) / 3);
+  @include card();
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  transition: background-color 0.3s;
+
+  .button {
+    margin-top: auto;
+  }
+
+  &__icon-wrapper {
+    width: min-content;
+  }
+
+  &__service-icon {
+    fill: $on-surface;
+    transition: fill 0.3s;
+    height: 48px;
+    display: inline;
+    text-align: center;
+    @media only screen and (max-width: $max-mobile-width) {
+      max-width: calc(100vw - 112px);
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    p {
+      white-space: pre-wrap;
+      color: $on-surface-50;
+      font-family: inherit;
+      transition: color 0.3s;
+    }
+  }
+
+  &:hover {
+    background-color: $inverse-surface;
+    .service-card__service-icon {
+      fill: $on-inverse-surface;
+    }
+    p {
+      color: $on-inverse-surface-50;
+    }
+    .button {
+      border: 1px solid $border-color-50;
+      color: $on-inverse-surface;
+      &:hover {
+        color: $on-surface;
+      }
+    }
+  }
+}

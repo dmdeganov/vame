@@ -1,0 +1,66 @@
+@use 'variables' as *;
+.footer {
+  position: relative;
+  //overflow: hidden;
+  &__top {
+    padding: 32px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(64px);
+    p {
+      color: $on-surface-50;
+      font-size: 14px;
+      font-feature-settings: 'clig' off, 'liga' off;
+      &:last-of-type {
+        text-align: right;
+      }
+    }
+    strong {
+      font-size: 20px;
+      font-weight: 700;
+      span {
+        color: $purple;
+      }
+    }
+  }
+  &__bottom {
+    text-align: center;
+    padding: 20px 0;
+    p {
+      color: $on-surface-50;
+      font-size: 14px;
+      font-feature-settings: 'clig' off, 'liga' off;
+    }
+  }
+  &__mobile-decoration {
+    display: none;
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+    &__mobile-decoration {
+      display: block;
+      z-index: -10;
+      position: absolute;
+      height: 300px;
+      overflow: hidden;
+      bottom: 0px;
+      width: 100%;
+      svg {
+        height: 397px;
+        position: absolute;
+        right: -225px;
+        bottom: -100px;
+      }
+    }
+    &__top {
+      padding: 32px 16px;
+      strong {
+        display: none;
+      }
+    }
+    &__bottom {
+      padding: 32px 16px;
+    }
+  }
+}

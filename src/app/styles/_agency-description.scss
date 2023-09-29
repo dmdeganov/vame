@@ -1,0 +1,20 @@
+@use 'variables' as *;
+.agency-description {
+  margin-top: 96px;
+  @include bounds();
+  display: flex;
+  column-gap: 24px;
+  align-items: center;
+  p {
+    font-weight: 500;
+    line-height: 140%;
+    max-width: 681px;
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+    margin-top: 32px;
+    flex-direction: column;
+    row-gap: 24px;
+    align-items: flex-start;
+  }
+}
+

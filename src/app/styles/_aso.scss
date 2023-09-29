@@ -1,0 +1,41 @@
+@use 'variables' as *;
+.aso {
+  @include bounds();
+  @include section-top-gap();
+  p {
+    max-width: 570px;
+    @include section-description-font();
+    margin-bottom: 32px;
+  }
+  ol {
+    display: flex;
+    column-gap: 48px;
+    li {
+      display: flex;
+      color: $on-surface-70;
+      span {
+        display: inline-block;
+        color: $on-inverse-surface;
+        text-align: center;
+        line-height: 18px;
+        aspect-ratio: 1;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: white;
+        margin-right: 12px;
+      }
+    }
+  }
+  @media only screen and (max-width: $max-mobile-width) {
+    p {
+      margin-bottom: 24px;
+    }
+    ol {
+      flex-direction: column;
+      row-gap: 12px;
+    }
+  }
+}

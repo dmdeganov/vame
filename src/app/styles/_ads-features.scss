@@ -2,6 +2,10 @@
 .ads-features {
   @include bounds();
   @include section-top-gap();
+  //border: 1px solid red;
+  //background-image: url('/light-2.svg');
+  //background-position: center;
+  //background-size: cover;
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

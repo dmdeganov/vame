@@ -22,15 +22,15 @@ const Footer = () => {
           vame<span>.</span>
         </strong>
         <p>
-          Reg.No: 1054701
+          {/*Reg.No: 1054701*/}
           <br />
-          info@vame.me
+          <span>info@vame.me</span>
           <br />
-          +9710412345678
+          <span>+9710412345678</span>
         </p>
       </div>
       <div className="footer__bottom">
-        <p className={manrope.className}>Copyright © 2023 vame.studio | All Rights Reserved</p>
+        {/*<p className={manrope.className}>Copyright © 2023 vame.studio | All Rights Reserved</p>*/}
       </div>
       <div className="footer__mobile-decoration">
         <ContactUsDecorationMobile />

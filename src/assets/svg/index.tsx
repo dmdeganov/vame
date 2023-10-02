@@ -1,6 +1,5 @@
 export {ReactComponent as GridSvg} from './grid.svg';
 export {ReactComponent as Light1Svg} from './light-1.svg';
-export {ReactComponent as Light1WideSvg} from './light-1-wide.svg';
 export {ReactComponent as GoogleAdsSvg} from './google-ads.svg';
 export {ReactComponent as FacebookAdsSvg} from './facebook-ads.svg';
 export {ReactComponent as TikTokAdsSvg} from './tik-tok-ads.svg';

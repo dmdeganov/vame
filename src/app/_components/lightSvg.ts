@@ -1,4 +1,4 @@
-<svg width="1920" height="960" viewBox="0 0 1920 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const light1Svg = `<svg width="1920" height="960" viewBox="0 0 1920 960" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_324_2)">
 <rect width="1920" height="960" fill="white"/>
 <g filter="url(#filter0_f_324_2)">
@@ -40,3 +40,4 @@
 </clipPath>
 </defs>
 </svg>
+`

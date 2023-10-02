@@ -40,6 +40,14 @@ const Button: React.FC<ButtonProps> = ({children, onClick, disabled, className, 
             "linear-gradient(267deg, #7c368d 4.04%, #753384 28.77%, #aa419e 72.29%, #83357a 99%)",
           transition: "opacity 0.4s"
         },
+        '&.button--white-on-hover': {
+          '&:hover': {
+            color: '#111'
+          },
+          '&:before': {
+            background: '#fff',
+          }
+        },
 
         '&:hover, &.button--filled': {
           borderColor: 'transparent',

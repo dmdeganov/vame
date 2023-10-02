@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@/app/_components/Button';
+import Image from 'next/image';
 import {
   FacebookAdsSvg,
   GoogleAdsSvg,
@@ -10,7 +11,6 @@ import {
   FeatureShape4Svg,
   FeatureShape5Svg,
   FeatureShape6Svg,
-  Light2Svg,
   GooglePlatformSvg,
   DiscoverPlatformSvg,
   YoutubePlatformSvg,
@@ -22,11 +22,16 @@ import {
   TikTokShape2,
   TikTokShape3,
   RtbDecoration,
-  Light3Svg,
   ContactUsDecoration,
+  Light1WideSvg,
+  Light1Svg,
+  Light2Svg,
 } from '@/assets/svg';
 import {Manrope} from 'next/font/google';
 import ContactUsForm from '@/app/_components/ContactUsForm';
+import Header from '@/app/_layout-components/Header';
+import Footer from '@/app/_layout-components/Footer';
+import CanvasLight from '@/app/_components/CanvasLight';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -40,43 +45,57 @@ export const metadata = {
 const Page = () => {
   return (
     <div className="home-page">
-      <div className="hero">
-        <p>ASO & Marketing Agency</p>
-        <h1>
-          Boost your app with <strong>vame</strong>
-          <b>.</b>
-          <span>agency</span>
-        </h1>
+      <div className="light-area">
+        <div className="light-wrapper">
+          <Image
+            src="/light-1.png"
+            className="light-image"
+            width={1920}
+            height={960}
+            quality={100}
+            alt=""
+            priority={true}
+          />
+        </div>
+        <Header />
+        <div className="hero">
+          <p>ASO & Marketing Agency</p>
+          <h1>
+            Boost your app with <strong>vame</strong>
+            <b>.</b>
+            <span>agency</span>
+          </h1>
+        </div>
+        <div className="agency-description">
+          <p>
+            A digital marketing agency with experience in App Store Optimization (ASO), Apple Search Ads, Google Ads,
+            Facebook Ads, and TikTok Ads. We have vast experience in buying and selling RTB advertising and mobile
+            promotion.
+          </p>
+          <Button className="button--white-on-hover">Get Started</Button>
+        </div>
+        <section className="aso">
+          <h2>ASO optimization</h2>
+          <p>
+            A set of actions to improve the search visibility of the application in the App Store and Google Play
+            rankings, increase organic installations, and attract interested users.
+          </p>
+          <ol>
+            <li>
+              <span>1</span>Improved search visibility
+            </li>
+            <li>
+              <span>2</span>Increased app conversion rate
+            </li>
+            <li>
+              <span>3</span>Growth in search queries
+            </li>
+            <li>
+              <span>4</span>Increase in organic installations
+            </li>
+          </ol>
+        </section>
       </div>
-      <div className="agency-description">
-        <p>
-          A digital marketing agency with experience in App Store Optimization (ASO), Apple Search Ads, Google Ads,
-          Facebook Ads, and TikTok Ads. We have vast experience in buying and selling RTB advertising and mobile
-          promotion.
-        </p>
-        <Button>Get Started</Button>
-      </div>
-      <section className="aso">
-        <h2>ASO optimization</h2>
-        <p>
-          A set of actions to improve the search visibility of the application in the App Store and Google Play
-          rankings, increase organic installations, and attract interested users.
-        </p>
-        <ol>
-          <li>
-            <span>1</span>Improved search visibility
-          </li>
-          <li>
-            <span>2</span>Increased app conversion rate
-          </li>
-          <li>
-            <span>3</span>Growth in search queries
-          </li>
-          <li>
-            <span>4</span>Increase in organic installations
-          </li>
-        </ol>
-      </section>
       <section className="aso-solutions">
         <h2>Our ASO solutions</h2>
         <div className="aso-solutions__grid">
@@ -179,7 +198,7 @@ const Page = () => {
           <div className="ads-features__card">
             <h4>Thorough keyword research</h4>
             <div className="ads-features__icon-wrapper">
-              <FeatureShape2Svg stroke="#fff"/>
+              <FeatureShape2Svg stroke="#fff" />
             </div>
           </div>
           <div className="ads-features__card">
@@ -208,84 +227,93 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div className="light-2-wrapper">
-        <div className="light-2">
-          <Light2Svg preserveAspectRatio="none" />
+      <div className="light-area light-area--2">
+        <div className="light-wrapper">
+          <Image
+            src="/light-2.png"
+            className="light-image"
+            width={1920}
+            height={2400}
+            quality={100}
+            alt=""
+            priority={true}
+          />
         </div>
-      </div>
-      <div className="ads-platforms">
-        <h4>We will run ads for your product on all major Google platforms:</h4>
-        <div className="ads-platforms__icons">
-          <GooglePlatformSvg />
-          <YoutubePlatformSvg />
-          <GooglePlayPlatformSvg />
-          <DiscoverPlatformSvg />
-          <DisplayNetworkPlatformSvg />
+        <div className="ads-platforms">
+          <h4>We will run ads for your product on all major Google platforms:</h4>
+          <div className="ads-platforms__icons">
+            <GooglePlatformSvg />
+            <YoutubePlatformSvg />
+            <GooglePlayPlatformSvg />
+            <DiscoverPlatformSvg />
+            <DisplayNetworkPlatformSvg />
+          </div>
+          <Button>Contact Us</Button>
         </div>
-        <Button>Contact Us</Button>
-      </div>
-      <section className="facebook">
-        <h2>How Facebook advertising works:</h2>
-        <div className="facebook__row">
-          <div className="facebook__cell">
-            <h4 className="inverse">Facebook platform</h4>
-            <div className="facebook__descripitons mw-529">
-              <p>Using the Facebook social media platform is a great way to attain your business goals.</p>
-              <p>
-                Facebook marketing can be used for many purposes, from promoting services and products to raising
-                awareness of a cause or event. Facebook lets you create ads that target specific audiences based on age
-                group, location, interests, and more.
-              </p>
+        <section className="facebook">
+          <h2>How Facebook advertising works:</h2>
+          <div className="facebook__row">
+            <div className="facebook__cell">
+              <h4 className="inverse">Facebook platform</h4>
+              <div className="facebook__descripitons mw-529">
+                <p>Using the Facebook social media platform is a great way to attain your business goals.</p>
+                <p>
+                  Facebook marketing can be used for many purposes, from promoting services and products to raising
+                  awareness of a cause or event. Facebook lets you create ads that target specific audiences based on
+                  age group, location, interests, and more.
+                </p>
+              </div>
+              <Button className="button--purple">Contact Us</Button>
             </div>
-            <Button className="button--purple">Contact Us</Button>
-          </div>
-          <div className="facebook__cell facebook__cell--decoration">
-            <FacebookDecoration1 />
-          </div>
-        </div>
-        <div className="facebook__row">
-          <div className="facebook__cell facebook__cell--decoration">
-            <FacebookDecoration2 />
-          </div>
-          <div className="facebook__cell">
-            <h4 className="inverse">Why working with an agency is preferable</h4>
-            <div className="facebook__descripitons">
-              <p>
-                Facebook advertising allows you to reach a large number of social media users within just a few days;
-                however, it's important to have a well-designed campaign because your ad's ROI depends on your entire
-                marketing funnel.
-              </p>
-              <p>
-                As an agency, we have extensive experience in the field of Facebook advertising campaigns, from writing
-                conversion-focused copy and creating unique offers to analyzing data from advertising accounts, which
-                allows you to turn your advertising budget into quality leads.
-              </p>
-              <p>
-                Think of a Facebook advertising agency as a turnkey system for scaling your business without hiring and
-                managing a bunch of employees.
-              </p>
+            <div className="facebook__cell facebook__cell--decoration">
+              <FacebookDecoration1 />
             </div>
           </div>
-        </div>
-        <div className="facebook__row">
-          <div className="facebook__cell">
-            <h4>You should contact us if:</h4>
-            <ul>
-              <li>You are too busy to do Facebook advertising on your own.</li>
-              <li>You lack the required experience.</li>
-              <li>You do not have the necessary tools to analyze the effectiveness of advertising campaigns.</li>
-              <li>You do not wish to squander your marketing budget.</li>
-              <li>You want to gain an edge over your competitors.</li>
-            </ul>
+          <div className="facebook__row">
+            <div className="facebook__cell facebook__cell--decoration">
+              <FacebookDecoration2 />
+            </div>
+            <div className="facebook__cell">
+              <h4 className="inverse">Why working with an agency is preferable</h4>
+              <div className="facebook__descripitons">
+                <p>
+                  Facebook advertising allows you to reach a large number of social media users within just a few days;
+                  however, it's important to have a well-designed campaign because your ad's ROI depends on your entire
+                  marketing funnel.
+                </p>
+                <p>
+                  As an agency, we have extensive experience in the field of Facebook advertising campaigns, from
+                  writing conversion-focused copy and creating unique offers to analyzing data from advertising
+                  accounts, which allows you to turn your advertising budget into quality leads.
+                </p>
+                <p>
+                  Think of a Facebook advertising agency as a turnkey system for scaling your business without hiring
+                  and managing a bunch of employees.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="facebook__cell facebook__cell--last">
-            <p>
-              Advertising on Facebook is an effective marketing tool that can double or triple your income, but it takes
-              the help of professionals to get the most out of it.
-            </p>
+          <div className="facebook__row">
+            <div className="facebook__cell">
+              <h4>You should contact us if:</h4>
+              <ul>
+                <li>You are too busy to do Facebook advertising on your own.</li>
+                <li>You lack the required experience.</li>
+                <li>You do not have the necessary tools to analyze the effectiveness of advertising campaigns.</li>
+                <li>You do not wish to squander your marketing budget.</li>
+                <li>You want to gain an edge over your competitors.</li>
+              </ul>
+            </div>
+            <div className="facebook__cell facebook__cell--last">
+              <p>
+                Advertising on Facebook is an effective marketing tool that can double or triple your income, but it
+                takes the help of professionals to get the most out of it.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
       <section className="tik-tok">
         <h2>What we offer in TikTok:</h2>
         <div className="tik-tok__cards">
@@ -321,97 +349,105 @@ const Page = () => {
         </div>
         <Button>Contact Us</Button>
       </section>
-      <div className="light-3-wrapper">
-        <div className="light-3">
-          <Light3Svg preserveAspectRatio="none" />
+      <div className="light-area light-area--3">
+        <div className="light-wrapper">
+          <Image
+            src="/light-3.png"
+            className="light-image"
+            width={1920}
+            height={2409}
+            quality={100}
+            alt=""
+          />
         </div>
-      </div>
-      <section className="rtb">
-        <h2>Buying and selling advertising using RTB technology</h2>
-        <div className="rtb__row">
-          <div className="rtb__descriptions">
-            <p>
+        <section className="rtb">
+
+          <h2>Buying and selling advertising using RTB technology</h2>
+          <div className="rtb__row">
+            <div className="rtb__descriptions">
+              <p>
               Real-time bidding (RTB) is a technology for buying online advertising at online auctions when decisions
               are made on hundreds of auctions in thousandths of a second.
-            </p>
-            <p>
+              </p>
+              <p>
               The RTB system buys the right placement at the right time—when the price per display meets the
               advertiser's requirements.
-            </p>
-            <p>RTB allows to increase reach and minimize CPM</p>
-          </div>
-          <div className="rtb__feautures">
-            <ul>
-              <li>Auction principle of advertising placement.</li>
-              <li>Depending on the sales stage, the audience receives relevant messages from the advertiser.</li>
-              <li>Contact and conversion will cost less.</li>
-              <li>
+              </p>
+              <p>RTB allows to increase reach and minimize CPM</p>
+            </div>
+            <div className="rtb__feautures">
+              <ul>
+                <li>Auction principle of advertising placement.</li>
+                <li>Depending on the sales stage, the audience receives relevant messages from the advertiser.</li>
+                <li>Contact and conversion will cost less.</li>
+                <li>
                 Cross-platform data is used to optimize advertising materials in real time on all communication channels
                 at once.
-              </li>
-              <li>Only high-quality target audience.</li>
-            </ul>
+                </li>
+                <li>Only high-quality target audience.</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="rtb__row">
-          <div className="rtb__offer">
-            <h4>What we offer</h4>
-            <div className="rtb__offer-descriptions">
-              <p>Using the Facebook social media platform is a great way to attain your business goals.</p>
-              <p>
+          <div className="rtb__row">
+            <div className="rtb__offer">
+              <h4>What we offer</h4>
+              <div className="rtb__offer-descriptions">
+                <p>Using the Facebook social media platform is a great way to attain your business goals.</p>
+                <p>
                 Facebook marketing can be used for many purposes, from promoting services and products to raising
                 awareness of a cause or event. Facebook lets you create ads that target specific audiences based on age
                 group, location, interests, and more.
-              </p>
+                </p>
+              </div>
+              <Button className="button--purple">Contact Us</Button>
             </div>
-            <Button className="button--purple">Contact Us</Button>
+            <div className="rtb__decoration">
+              <RtbDecoration />
+            </div>
           </div>
-          <div className="rtb__decoration">
-            <RtbDecoration />
-          </div>
-        </div>
-      </section>
-      <section className="mobile-marketing">
-        <h2>Mobile Marketing</h2>
-        <div className="mobile-marketing__grid">
-          <p className={manrope.className}>
-            Our agency realizes the importance of being mobile and has experience working with brands.
-          </p>
-          <div className="mobile-marketing__descriptions">
+        </section>
+        <section className="mobile-marketing">
+          <h2>Mobile Marketing</h2>
+          <div className="mobile-marketing__grid">
             <p className={manrope.className}>
+            Our agency realizes the importance of being mobile and has experience working with brands.
+            </p>
+            <div className="mobile-marketing__descriptions">
+              <p className={manrope.className}>
               We derive the most out of mobile devices. Mobile-first is not just a buzzword but the present and the
               future of digital communications.
-            </p>
-            <p className={manrope.className}>
+              </p>
+              <p className={manrope.className}>
               We use all of our experience to reach your target customers at the time they are most likely to be
               interested.
-            </p>
-          </div>
-          <div className="mobile-marketing__approach">
-            <h4>Our approach:</h4>
-            <ul>
-              <li>We tailor campaigns to increase brand value.</li>
-              <li>
+              </p>
+            </div>
+            <div className="mobile-marketing__approach">
+              <h4>Our approach:</h4>
+              <ul>
+                <li>We tailor campaigns to increase brand value.</li>
+                <li>
                 We develop a comprehensive mobile marketing strategy that enhances awareness and increases conversion.
-              </li>
-              <li>
+                </li>
+                <li>
                 We develop a comprehensive mobile marketing strategy that enhances awareness and increases conversion.
-              </li>
-            </ul>
-          </div>
-          <div className="mobile-marketing__how">
-            <h4>How we work:</h4>
-            <ul>
-              <li>We provide measurable growth.</li>
-              <li>
+                </li>
+              </ul>
+            </div>
+            <div className="mobile-marketing__how">
+              <h4>How we work:</h4>
+              <ul>
+                <li>We provide measurable growth.</li>
+                <li>
                 We use mobile data to track conversions, traffic quality and quantity, page views, and bounce rates.
-              </li>
-              <li>We create mobile-optimized landing pages with clear calls to action.</li>
-              <li>We use platforms that only charge when mobile ads result in a store visit.</li>
-            </ul>
+                </li>
+                <li>We create mobile-optimized landing pages with clear calls to action.</li>
+                <li>We use platforms that only charge when mobile ads result in a store visit.</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <section className="contact-us" id="contact-us">
         <div className="contact-us__form">
           <h1>
@@ -424,6 +460,7 @@ const Page = () => {
           <ContactUsDecoration />
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

@@ -23,15 +23,11 @@ import {
   TikTokShape3,
   RtbDecoration,
   ContactUsDecoration,
-  Light1WideSvg,
-  Light1Svg,
-  Light2Svg,
 } from '@/assets/svg';
 import {Manrope} from 'next/font/google';
 import ContactUsForm from '@/app/_components/ContactUsForm';
 import Header from '@/app/_layout-components/Header';
 import Footer from '@/app/_layout-components/Footer';
-import CanvasLight from '@/app/_components/CanvasLight';
 
 const manrope = Manrope({
   subsets: ['latin'],

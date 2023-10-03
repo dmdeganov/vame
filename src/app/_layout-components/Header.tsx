@@ -4,9 +4,9 @@ import '@/app/styles/_header.scss';
 const Header = () => {
   return (
     <header className="header" id="home">
-      <a href="" className="header__company">
+      <span  className="header__company">
         vame.
-      </a>
+      </span>
       <div className="header__links-center">
         <a href="#aso">ASO</a>
         <a href="#advertising">Advertising</a>

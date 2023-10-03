@@ -16,6 +16,8 @@
   &__company {
     font-size: 20px;
     font-weight: 700;
+    color: $on-inverse-surface;
+    white-space: nowrap;
   }
   &__links-center {
     display: flex;

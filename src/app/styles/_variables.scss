@@ -52,7 +52,7 @@ $max-mobile-width: 640px;
 @mixin li-marker {
   position: relative;
   padding-left: 25px;
-  line-height: 1;
+  line-height: normal;
   &:before {
     content: '';
     display: inline-block;

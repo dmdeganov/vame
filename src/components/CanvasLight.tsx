@@ -1,6 +1,6 @@
 'use client'
 import React, {useEffect, useRef} from 'react';
-import {light1Svg} from '@/app/_components/lightSvg';
+import {light1Svg} from '@/components/lightSvg';
 
 const CanvasLight = () => {
   const ref = useRef<HTMLCanvasElement>(null);

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Manrope} from 'next/font/google';
-import {ContactUsDecoration, ContactUsDecorationMobile, FeatureShape2Svg, Light3Svg} from '@/assets/svg';
+import {ContactUsDecorationMobile} from '@/assets/svg';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -11,26 +11,22 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__top">
-        <p>
-          Al Safouh Second,
-          <br />
-          Business Central Towers,
-          <br />
-          Office 1006B, Dubai, UAE
+        <p className="footer__address">
+          Dubai Silicon Oasis, Techno Hub 2, 66th Street, Nr 20, Nad Al Hessa, Dubai, United Arab Emirates
         </p>
-        <strong className="footer__company-name">
+        <a className="footer__company-name" href="#home">
           vame<span>.</span>
-        </strong>
-        <p>
-          {/*Reg.No: 1054701*/}
+        </a>
+        <p className="footer__details">
+          <span>Premises Number - C132-L</span>
           <br />
-          <span>info@vame.me</span>
+          <span>information.vame@gmail.com</span>
           <br />
-          <span>+9710412345678</span>
+          <span>Makani Number - 3624279269</span>
         </p>
       </div>
       <div className="footer__bottom">
-        {/*<p className={manrope.className}>Copyright © 2023 vame.studio | All Rights Reserved</p>*/}
+        <p className={manrope.className}>Copyright © 2023 vame.studio | All Rights Reserved</p>
       </div>
       <div className="footer__mobile-decoration">
         <ContactUsDecorationMobile />

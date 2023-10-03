@@ -1,6 +1,8 @@
 @use 'variables' as *;
 .home-page{
   overflow-x: hidden;
+  scroll-behavior: smooth;
+
   h2{
     font-size:48px;
     font-weight: 500;

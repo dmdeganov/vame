@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@/app/_components/Button';
+import Button from '@/components/Button';
 import Image from 'next/image';
 import {
   FacebookAdsSvg,
@@ -25,7 +25,7 @@ import {
   ContactUsDecoration,
 } from '@/assets/svg';
 import {Manrope} from 'next/font/google';
-import ContactUsForm from '@/app/_components/ContactUsForm';
+import ContactUsForm from '@/app/(contact-form)/ContactUsForm';
 import Header from '@/app/_layout-components/Header';
 import Footer from '@/app/_layout-components/Footer';
 
@@ -37,6 +37,7 @@ const manrope = Manrope({
 export const metadata = {
   title: 'Vame',
 };
+
 
 const Page = () => {
   return (
@@ -68,9 +69,9 @@ const Page = () => {
             Facebook Ads, and TikTok Ads. We have vast experience in buying and selling RTB advertising and mobile
             promotion.
           </p>
-          <Button className="button--white-on-hover">Get Started</Button>
+          <a href="#aso"><Button className="button--white-on-hover">Get Started</Button></a>
         </div>
-        <section className="aso">
+        <section className="aso" id="aso">
           <h2>ASO optimization</h2>
           <p>
             A set of actions to improve the search visibility of the application in the App Store and Google Play
@@ -122,9 +123,9 @@ const Page = () => {
             <p>Improving app visibility and conversion to installation.</p>
           </div>
         </div>
-        <Button>Contact Us</Button>
+        <a href="#contact-us"><Button>Contact Us</Button></a>
       </section>
-      <section className="ads-services">
+      <section className="ads-services" id="advertising">
         <h2>Our Advertising services</h2>
         <div className="ads-services__cards">
           <div className="ads-services__card service-card">
@@ -141,7 +142,7 @@ const Page = () => {
                 We will take into account your pvious data and model a pcise marketing plan for your target markets.
               </p>
             </div>
-            <Button>Learn More</Button>
+            <a href="#google-ads"><Button>Learn More</Button></a>
           </div>
           <div className="ads-services__card service-card">
             <div className="service-card__icon-wrapper">
@@ -161,7 +162,7 @@ const Page = () => {
                 advertising goals.
               </p>
             </div>
-            <Button>Learn More</Button>
+            <a href="#facebook-ads"><Button>Learn More</Button></a>
           </div>
           <div className="ads-services__card service-card">
             <div className="service-card__icon-wrapper">
@@ -178,11 +179,11 @@ const Page = () => {
                 young audience like never before.
               </p>
             </div>
-            <Button>Learn More</Button>
+            <a href="#tiktok-ads"><Button>Learn More</Button></a>
           </div>
         </div>
       </section>
-      <section className="ads-features">
+      <section className="ads-features" id="google-ads">
         <h2>Managing your advertising in Google Ads will include the following:</h2>
         <div className="ads-features__grid">
           <div className="ads-features__card">
@@ -244,9 +245,9 @@ const Page = () => {
             <DiscoverPlatformSvg />
             <DisplayNetworkPlatformSvg />
           </div>
-          <Button>Contact Us</Button>
+          <a href="#contact-us"><Button>Contact Us</Button></a>
         </div>
-        <section className="facebook">
+        <section className="facebook" id="facebook-ads">
           <h2>How Facebook advertising works:</h2>
           <div className="facebook__row">
             <div className="facebook__cell">
@@ -259,7 +260,7 @@ const Page = () => {
                   age group, location, interests, and more.
                 </p>
               </div>
-              <Button className="button--purple">Contact Us</Button>
+              <a href="#contact-us"><Button className="button--purple">Contact Us</Button></a>
             </div>
             <div className="facebook__cell facebook__cell--decoration">
               <FacebookDecoration1 />
@@ -310,7 +311,7 @@ const Page = () => {
         </section>
       </div>
 
-      <section className="tik-tok">
+      <section className="tik-tok" id="tiktok-ads">
         <h2>What we offer in TikTok:</h2>
         <div className="tik-tok__cards">
           <div className="tik-tok__card">
@@ -343,7 +344,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <Button>Contact Us</Button>
+        <a href="#contact-us"><Button>Contact Us</Button></a>
       </section>
       <div className="light-area light-area--3">
         <div className="light-wrapper">
@@ -356,8 +357,7 @@ const Page = () => {
             alt=""
           />
         </div>
-        <section className="rtb">
-
+        <section className="rtb" id="rtb">
           <h2>Buying and selling advertising using RTB technology</h2>
           <div className="rtb__row">
             <div className="rtb__descriptions">
@@ -395,14 +395,14 @@ const Page = () => {
                 group, location, interests, and more.
                 </p>
               </div>
-              <Button className="button--purple">Contact Us</Button>
+              <a href="#contact-us"><Button className="button--purple">Contact Us</Button></a>
             </div>
             <div className="rtb__decoration">
               <RtbDecoration />
             </div>
           </div>
         </section>
-        <section className="mobile-marketing">
+        <section className="mobile-marketing" id="mobile-marketing">
           <h2>Mobile Marketing</h2>
           <div className="mobile-marketing__grid">
             <p className={manrope.className}>

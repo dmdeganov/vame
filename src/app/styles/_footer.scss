@@ -13,10 +13,8 @@
       color: $on-surface-50;
       font-size: 14px;
       font-feature-settings: 'clig' off, 'liga' off;
-      &:last-of-type {
-        text-align: right;
-      }
     }
+
     strong {
       font-size: 20px;
       font-weight: 700;
@@ -24,6 +22,19 @@
         color: $purple;
       }
     }
+  }
+  &__address {
+    max-width: 233px;
+  }
+  &__company-name{
+    font-size: 20px;
+    font-weight: 700;
+    span{
+      color: $purple;
+    }
+  }
+  &__details {
+    text-align: right;
   }
   &__bottom {
     text-align: center;
@@ -54,11 +65,25 @@
       }
     }
     &__top {
-      padding: 32px 16px;
-      strong {
-        display: none;
-      }
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 32px;
+      padding: 20px 20px 16px 20px;
+      position: relative;
     }
+    &__address {
+      max-width: 200px;
+    }
+    &__company-name{
+      transform: rotate(90deg);
+      position: absolute;
+      right: 0;
+      top: 84px;
+    }
+    &__details {
+      text-align: left;
+    }
+
     &__bottom {
       padding: 32px 16px;
     }

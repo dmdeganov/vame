@@ -1,24 +1,23 @@
 import React from 'react';
-import Link from 'next/link';
 import '@/app/styles/_header.scss';
 
 const Header = () => {
   return (
-    <header className="header" id="top">
-      <Link href="#top" className="header__company">
+    <header className="header" id="home">
+      <a href="" className="header__company">
         vame.
-      </Link>
+      </a>
       <div className="header__links-center">
-        <Link href="#aso">ASO</Link>
-        <Link href="#advertising">Advertising</Link>
-        <Link href="#google-ads">Google Ads</Link>
-        <Link href="#facebook-ads">Facebook Ads</Link>
-        <Link href="#tiktok-ads">TikTok Ads</Link>
-        <Link href="#rtb">RTB</Link>
-        <Link href="#mobile-marketing">Mobile Marketing</Link>
+        <a href="#aso">ASO</a>
+        <a href="#advertising">Advertising</a>
+        <a href="#google-ads">Google Ads</a>
+        <a href="#facebook-ads">Facebook Ads</a>
+        <a href="#tiktok-ads">TikTok Ads</a>
+        <a href="#rtb">RTB</a>
+        <a href="#mobile-marketing">Mobile Marketing</a>
       </div>
       <div className="header__contact-us">
-        <Link href="#contact-us">Contact Us</Link>
+        <a href="#contact-us">Contact Us</a>
       </div>
     </header>
   );

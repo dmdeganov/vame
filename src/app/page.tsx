@@ -233,7 +233,6 @@ const Page = () => {
             height={2400}
             quality={100}
             alt=""
-            priority={true}
           />
         </div>
         <div className="ads-platforms">

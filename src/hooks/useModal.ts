@@ -3,7 +3,7 @@ import {useState} from 'react';
 
 export default function useModal<ModalData>() {
   const [isOpen, setIsOpen] = useState(false);
-  const [modalData, setModalData] = useState<ModalData>(null);
+  const [modalData, setModalData] = useState<ModalData | null>(null);
   const open = () => setIsOpen(true);
   const toggle = () => {
     setIsOpen(!isOpen);

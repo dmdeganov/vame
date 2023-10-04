@@ -47,11 +47,11 @@
       }
     }
   }
-  @media only screen and (max-width: $max-mobile-width) {
-  &__grid{
-    grid-template-columns: 1fr;
-    row-gap: 64px;
-  }
+  @media only screen and (max-width: 870px) {
+    &__grid{
+      grid-template-columns: 1fr;
+      row-gap: 64px;
+    }
     &__descriptions{
       margin-top: -40px;
     }

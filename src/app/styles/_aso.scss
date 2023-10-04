@@ -29,11 +29,20 @@
       }
     }
   }
+  @media only screen and (max-width: 1300px) {
+    ol {
+      display: grid;
+      grid-template-columns:repeat(2, max-content);
+      row-gap: 20px;
+      column-gap: 48px;
+    }
+  }
   @media only screen and (max-width: $max-mobile-width) {
     p {
       margin-bottom: 24px;
     }
     ol {
+      display: flex;
       flex-direction: column;
       row-gap: 12px;
     }

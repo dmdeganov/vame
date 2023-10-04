@@ -2,10 +2,6 @@
 .ads-features {
   @include bounds();
   @include section-top-gap();
-  //border: 1px solid red;
-  //background-image: url('/light-2.svg');
-  //background-position: center;
-  //background-size: cover;
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -23,7 +19,20 @@
         margin-top: -30px;
       }
     }
-    @media only screen and (max-width: $max-mobile-width) {
+    @media only screen and (max-width: 1244px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 368px);
+      & > div {
+        &:nth-of-type(2) {
+          height: 100%;
+        }
+        &:nth-of-type(5) {
+          height: 100%;
+          margin-top: unset;
+        }
+      }
+    }
+    @media only screen and (max-width:768px) {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(6, 368px);
       & > div {
@@ -52,6 +61,7 @@
       margin: 0 auto;
       left: 50%;
       transform: translateX(-50%);
+      max-width: 100%;
     }
   }
 }

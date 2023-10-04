@@ -10,11 +10,15 @@
     line-height: 140%;
     max-width: 681px;
   }
+  @media only screen and (max-width: 1000px) {
+    margin-top: 64px;
+    flex-direction: column;
+    row-gap: 48px;
+    align-items: flex-start;
+  }
   @media only screen and (max-width: $max-mobile-width) {
     margin-top: 32px;
-    flex-direction: column;
     row-gap: 24px;
-    align-items: flex-start;
   }
 }
 

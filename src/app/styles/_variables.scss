@@ -30,6 +30,9 @@ $max-mobile-width: 640px;
   margin-right: auto;
   padding: 0 $layout-padding-h;
   width: min(100%, 1440px);
+  @media only screen and (max-width: 768px) {
+    padding: 0 32px;
+  }
   @media only screen and (max-width: $max-mobile-width) {
     padding: 0 16px;
     margin-left: 0;
@@ -38,6 +41,9 @@ $max-mobile-width: 640px;
 }
 @mixin section-top-gap {
   margin-top: $section-gap;
+  @media only screen and (max-width: 992px) {
+    margin-top: 144px;
+  }
   @media only screen and (max-width: $max-mobile-width) {
     margin-top: $section-gap-mobile;
   }
@@ -47,6 +53,47 @@ $max-mobile-width: 640px;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(9px);
   padding: 32px 32px 48px 24px;
+  transition: background-color 0.3s;
+  h4, p, li{
+    transition: color 0.3s;
+  }
+  li:before{
+    transition: background-color 0.3s;
+  }
+  svg{
+    transition: stroke  0.3s, fill 0.3s;
+  }
+  &:hover {
+    h4{
+      color: $on-inverse-surface;
+    }
+    p, li{
+      color: $on-inverse-surface-50;
+    }
+    li:before{
+      background-color: $on-inverse-surface;
+    }
+    background-color: $inverse-surface;
+    .service-card__service-icon {
+      fill: $on-inverse-surface;
+    }
+    p {
+      color: $on-inverse-surface-50;
+    }
+    .button {
+      border: 1px solid $border-color-50;
+      color: $on-inverse-surface;
+      &:hover {
+        color: $on-surface;
+      }
+    }
+    svg[stroke='white'],  svg[stroke='#fff']{
+      stroke: black;
+    }
+    svg[fill='white'],  svg[fill='#fff']{
+      fill: black;
+    }
+  }
 }
 
 @mixin li-marker {

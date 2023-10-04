@@ -62,8 +62,14 @@
       color: $on-inverse-surface-50;
     }
   }
-
-  @media only screen and (max-width: $max-mobile-width) {
+  @media only screen and (max-width: 992px) {
+    &__cell {
+      &--decoration {
+        flex-basis: 33%;
+      }
+    }
+  }
+  @media only screen and (max-width: 900px) {
     &__row {
       flex-direction: column;
       row-gap: 32px;
@@ -75,6 +81,20 @@
         margin-bottom: 64px;
       }
     }
+    &__cell {
+      &--decoration {
+        display: none;
+      }
+    }
+    &__cell {
+      &--decoration {
+      flex-basis: 33%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $max-mobile-width) {
+
     &__cell {
       &--decoration {
         display: none;

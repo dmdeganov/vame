@@ -34,10 +34,6 @@ const manrope = Manrope({
   display: 'swap',
 });
 
-export const metadata = {
-  title: 'Vame',
-};
-
 
 const Page = () => {
   return (
@@ -370,7 +366,7 @@ const Page = () => {
               </p>
               <p>RTB allows to increase reach and minimize CPM</p>
             </div>
-            <div className="rtb__feautures">
+            <div className="rtb__features">
               <ul>
                 <li>Auction principle of advertising placement.</li>
                 <li>Depending on the sales stage, the audience receives relevant messages from the advertiser.</li>

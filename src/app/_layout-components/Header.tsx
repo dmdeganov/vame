@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header__links-center">
         <a href="#aso">ASO</a>
         <a href="#advertising">Advertising</a>
-        <a href="#google-ads">Google Ads</a>
+        <a href="#goog-ads">Google Ads</a>
         <a href="#facebook-ads">Facebook Ads</a>
         <a href="#tiktok-ads">TikTok Ads</a>
         <a href="#rtb">RTB</a>

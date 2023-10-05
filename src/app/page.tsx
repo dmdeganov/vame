@@ -107,11 +107,11 @@ const Page = () => {
               <li>Personal consultation on ASO mobile app promotion (ASO expert + promotion expert)</li>
               <li>Semantic core collection for the App Store, Google Play</li>
               <li>Keyword selection for mobile app promotion</li>
-              <li>Apple Search Ads and Google App Campai gns</li>
+              <li>Apple Search Ads and Google App Campaigns</li>
             </ul>
           </div>
           <div className="aso-solutions__cell">
-            <h4>Comphensive ASO Support for Google Play and AppStore</h4>
+            <h4>Comprehensive ASO Support for Google Play and AppStore</h4>
             <p>ASO optimization and app promotion services in one package.</p>
           </div>
           <div className="aso-solutions__cell">
@@ -135,10 +135,10 @@ const Page = () => {
                 opportunities with Google Ads that are available for your company.
               </p>
               <p>
-                We will take into account your pvious data and model a pcise marketing plan for your target markets.
+                We will take into account your previous data and model a precise marketing plan for your target markets.
               </p>
             </div>
-            <a href="#google-ads"><Button>Learn More</Button></a>
+            <a href="#goog-ads"><Button>Learn More</Button></a>
           </div>
           <div className="ads-services__card service-card">
             <div className="service-card__icon-wrapper">
@@ -147,10 +147,10 @@ const Page = () => {
             <div className="service-card__description">
               <p>
                 We provide a full range of services related to digital social media marketing, from advertising
-                creatives to optimizing advertising campaigns.{' '}
+                creatives to optimizing advertising campaigns.
               </p>
               <p>
-                We are ppared to take over your Facebook Ads marketing campaigns, increase your conversion rate, and
+                We are prepared to take over your Facebook Ads marketing campaigns, increase your conversion rate, and
                 improve your ROI.
               </p>
               <p>
@@ -179,7 +179,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="ads-features" id="google-ads">
+      <section className="ads-features" id="goog-ads">
         <h2>Managing your advertising in Google Ads will include the following:</h2>
         <div className="ads-features__grid">
           <div className="ads-features__card">
@@ -421,7 +421,7 @@ const Page = () => {
                 We develop a comprehensive mobile marketing strategy that enhances awareness and increases conversion.
                 </li>
                 <li>
-                We develop a comprehensive mobile marketing strategy that enhances awareness and increases conversion.
+                  We use a multi-channel approach to prepare a mobile marketing strategy for your target audience.
                 </li>
               </ul>
             </div>

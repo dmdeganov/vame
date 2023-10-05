@@ -75,7 +75,7 @@ const ContactUsForm = () => {
             name="phone"
             control={control}
             rules={{required: true}}
-            render={({field}) => <TextField {...field} label="phone" ref={null} type="tel" />}
+            render={({field}) => <TextField {...field} label="Phone" ref={null} type="tel" />}
           />
         </div>
         <Controller
